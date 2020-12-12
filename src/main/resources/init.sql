@@ -1,0 +1,1 @@
+INSERT INTO `grade` (`id`, `name`) VALUES ('1', 'Grade One'), ('2', 'Grade Two'), ('3', 'Grade Three'), ('4', 'Grade Four'), ('5', 'Grade Five'), ('6', 'Grade Six');
