@@ -58,9 +58,10 @@ public class SettingsController {
                 totalPayableSalary += salary;
                 if (totalPayableSalary <= companyBalance) {
                     Bank bankInfo = employee.getBankInfo();
-                    bankInfo.setCurrentBalance(salary);
+                    bankInfo.setCurrentBalance(bankInfo.getCurrentBalance() + salary);
                 } else {
-                    return "error";
+                    model.addAttribute("message", "Insufficient bank balance! Please add more money to transfer!");
+                    return "settings";
                 }
             }
             employeeService.updateAllEmployee(employeeList);
